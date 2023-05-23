@@ -6,6 +6,9 @@ public class Main {
         System.out.println("\n\n");
         Scanner scanner = new Scanner(System.in);
 
+        String PythagroeanTheoremInfo = "The Pythagorean theorem, named after the ancient Greek mathematician Pythagoras, dates back to around 500 BCE and is one of the earliest known mathematical principles that continue to be widely used in various fields today.";
+        String QuadraticFormulaInfo = "The quadratic formula, which enables the solution of quadratic equations, has its origins in ancient Babylonian and Greek mathematics. While its precise origin and development are not attributed to a specific individual, it has been a fundamental tool in mathematics for centuries.";
+
 
         System.out.print("Do you want to use the Pythagorean Theorem (1) or the Quadratic Formula (2)\nAnswer 1 or 2: ");
         boolean isPythagoreanTheorem;
@@ -17,6 +20,8 @@ public class Main {
         if (isPythagoreanTheorem == true) {
             // User wants to do the pythagorean theorem
             System.out.println("You selected the Pythagorean Theorem.");
+            System.out.println(PythagroeanTheoremInfo + "\n");
+
             // Request all variables
             System.out.println("Given a triangle has sides a, b, and c,");
             System.out.print("Input side a: ");
@@ -31,9 +36,10 @@ public class Main {
             System.out.println("Side c: " + sideC);
         } else {
             // User wants to do the quadratic formula
-
-            // Request all variables
             System.out.println("You selected the Quadratic Formula.");
+            System.out.println(QuadraticFormulaInfo + "\n");
+            
+            // Request all variables
             System.out.println("Given ax^2 + bx + c = 0,");
             System.out.print("Input variable a: ");
             float variableA = scanner.nextFloat();
@@ -49,7 +55,7 @@ public class Main {
             double answerB = (-variableB - Math.sqrt(variableB * variableB - 4 * variableA * variableC)) / (2 * variableA);
 
             // Return both values
-            System.out.println(answerA + ", " + answerB);
+            System.out.println("Roots: " + answerA + ", " + answerB);
 
         }
 
